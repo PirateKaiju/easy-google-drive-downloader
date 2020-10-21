@@ -1,7 +1,11 @@
 #!/bin/bash
+
+#echo "Insert the path for a .txt file with the Google Drive links";
+#read filename; #UNCOMMENT FOR GETTING USER INPUT OF FILENAME
+
 filename='gdrive_links.txt' #TODO: THIS
-log="download_log.log"
-echo Start
+log="download_log.log";
+echo Start;
 #
 #pidlist=()
 
