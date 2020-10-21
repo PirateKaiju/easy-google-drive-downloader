@@ -6,8 +6,8 @@ function check_extension { #FORMAT: FILE_EXTENSION, EXTENSION_ARRAY
 	if [[ " ${EXPECTEDEXTENSIONS[@]} " =~ " $FILEEXTENSION " ]]; then # IN PRACTICE, SAME AS USING A FOR
 		#DO NOTHING
 		echo "Found result for format $FILEEXTENSION "
-	elif [ $1 = "html" ]; then
-		FILEEXTENSION="zip"
+	elif [ $FILEEXTENSION = "html" ]; then
+		FILEEXTENSION="zip" #CAN CHECK AS MANY OTHERS AS NEEDED TOO
 	else
 		FILEEXTENSION="pdf" #WHY?
 		echo "Error: Unsupported Format" #SWAPPED FOR SOMETHING MORE GENERALISTIC
