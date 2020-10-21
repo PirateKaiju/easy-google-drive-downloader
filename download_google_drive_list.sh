@@ -1,5 +1,5 @@
 #!/bin/bash
-filename='gdrive_links.txt'
+filename='gdrive_links.txt' #TODO: THIS
 log="download_log.log"
 echo Start
 #

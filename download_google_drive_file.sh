@@ -2,7 +2,7 @@
 if [ $# -eq 1 ];then
 	FILEID=$1	
 else
-	echo "insert the google drive full url to download";
+	echo "Insert the google drive full url to download";
 	read FILEID;
 fi
 FILEID="$(echo $FILEID | sed -n 's#.*\https\:\/\/drive\.google\.com/file/d/\([^.]*\)\/view.*#\1#;p')";
@@ -12,5 +12,5 @@ wget -q --show-progress --load-cookies /tmp/cookies.txt "https://docs.google.com
 if [ -f "$FILENAME" ]; then
 	echo "file $FILENAME has been downloaded"
 else
-	echo "file $FILENAME cannot be downloaded,any error appear"
+	echo "file $FILENAME cannot be downloaded, some has error occurred"
 fi
